@@ -42,6 +42,8 @@
   ***
 
 [Active Record Methods](https://guides.rubyonrails.org/active_record_querying.html)
+***
 [Active Record Docs](http://edgeguides.rubyonrails.org/active_record_migrations.html#using-the-up-down-methods)
+***
 [Create Table Docs](https://apidock.com/rails/ActiveRecord/InternalMetadata/create_table/class)
 
