@@ -1,0 +1,21 @@
+require_relative './config/environment'
+require 'sinatra/activerecord/rake'
+
+desc "Start our app console"
+task :console do
+  Pry.start
+end
+
+# Example of a creating a namespace manually
+
+# namespace :db do
+
+#   desc "Create migration" 
+#   task :migrate do
+#     puts "migrate the database"
+#   end 
+
+# end
+
+# create a namespace for grouping commands
+
