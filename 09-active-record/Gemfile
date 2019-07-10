@@ -1,0 +1,10 @@
+source "https://rubygems.org"
+
+# need to "import" all gems necessary for application functionality
+
+gem 'require_all'
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'rake'
+gem 'pry'
+gem 'sqlite3'
