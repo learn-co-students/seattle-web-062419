@@ -152,3 +152,7 @@ Because Programmer 1's changes are the ones that conflict with master, Programme
 9. Now if Programmer 1 refreshes the page on the pull request for this branch, the button will turn green. Now we can approve Programmer 1's pull request!
 
 (For Programmer 2's local copy to reflect this new version, they will need to run `git pull origin master`)
+
+#### GitHub Resources
+[Project Board Setup](https://help.github.com/en/articles/creating-a-project-board)
+[Organization Setup](https://help.github.com/en/articles/creating-a-new-organization-from-scratch)
