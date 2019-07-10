@@ -1,6 +1,6 @@
 # GitHub Collaboration Walkthrough
 
-This lecture was a walkthrough of how to (and how not to) collaborate with GitHub
+This lecture is a walkthrough of how to (and how not to) collaborate with GitHub
 
 ## Part 1: When Things Go Right
 
