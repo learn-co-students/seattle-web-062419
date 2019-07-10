@@ -60,7 +60,7 @@ To get their local copies of the repository synced up with the remote GitHub cop
 1. `git checkout master` to move from their feature branch (`programmer1-new-branch-name` and `programmer2-new-branch-name`, respectively) back to master
 2. `git pull origin master` to fetch changes from the remote GitHub copy and merge them in. There are no merge conflicts. Yay!
 
-## Part 2: When Things Go Wrong
+## Part 2: When Things Go Wrong (Gituations)
 
 Programmer 1 and Programmer 2 agree that the README file should be edited to say that they are the authors. However, they don't communicate clearly about who is doing this task, so both are start making changes to the same file.
 
