@@ -154,5 +154,5 @@ Because Programmer 1's changes are the ones that conflict with master, Programme
 (For Programmer 2's local copy to reflect this new version, they will need to run `git pull origin master`)
 
 #### GitHub Resources
-[Project Board Setup](https://help.github.com/en/articles/creating-a-project-board)
+[Project Board Setup](https://help.github.com/en/articles/creating-a-project-board)</br>
 [Organization Setup](https://help.github.com/en/articles/creating-a-new-organization-from-scratch)
