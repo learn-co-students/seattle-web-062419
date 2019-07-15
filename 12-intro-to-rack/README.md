@@ -1,5 +1,7 @@
 ### SWBATs :
-- [ ]
+- [ ] Intro to web
+- [ ] Learn `Rack::Request`
+- [ ] Learn `Rack::Response`
 ### Deliverables :
 - [ ] Flatiron School Welcome message site.
 
