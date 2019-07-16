@@ -37,4 +37,13 @@ class BooksController < Sinatra::Base
     @book.update(title: params["title"], author: params["author"], snippet: params["snippet"])
     redirect "/books/#{@book.id}"
   end
+
+  # destroy
+  delete '/books/:id' do
+    Book.destroy(params[:id])
+    # ^ this is the same as:
+    # @book = Book.find(params[:id])
+    # @book.destroy
+    redirect '/books'
+  end
 end

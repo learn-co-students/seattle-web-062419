@@ -2,7 +2,7 @@
 
 ### Sinatra
 
- - [ ] Understand the implementation of the _7 RESTful routes_ in Sinatra
+ - [x] Understand the implementation of the _7 RESTful routes_ in Sinatra
 
 | CRUD Letter | RESTful Route          | Controller Action |
 |-------------|------------------------|-------------------|
@@ -12,6 +12,7 @@
 | R(ead)      | GET    /books/:id      | show              |
 | U(pdate)    | GET    /books/:id/edit | edit              |
 | U(pdate)    | PATCH  /books/:id      | update            |
+| D(elete)    | DELETE /books/:id      | destroy           |
 
  - [x] Important parts of an HTML form
     - `action` and `method` are the two parts of the RESTful route
@@ -38,4 +39,4 @@
 ### Deliverables
  - [x] As a site visitor, I should be able to create a new book
  - [x] As a site visitor, I should be able to edit an existing book
- - [ ] As a site visitor, I should be able to delete an existing book via a button on the edit form
+ - [x] As a site visitor, I should be able to delete an existing book via a button on the edit form
