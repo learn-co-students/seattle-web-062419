@@ -40,3 +40,8 @@
  - [x] As a site visitor, I should be able to create a new book
  - [x] As a site visitor, I should be able to edit an existing book
  - [x] As a site visitor, I should be able to delete an existing book via a button on the edit form
+ 
+Note: there are three total commits associated with this lecture:
+1. [Setup (same code from yesterday + new README)](https://github.com/learn-co-students/seattle-web-062419/commit/c15d4737d741350534e878dd6f7fff1a06cbd266)
+2. [Code from lecture (added new, create, edit, update)](https://github.com/learn-co-students/seattle-web-062419/commit/a719f0ca611a3705e6f4ab6ca7c19c8b42d57704)
+3. [Code from after lecture (added delete)](https://github.com/learn-co-students/seattle-web-062419/commit/be72cb36d19093003d2bec57271f897d3097358a)
