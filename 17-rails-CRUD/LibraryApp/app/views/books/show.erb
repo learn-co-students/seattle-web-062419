@@ -1,0 +1,5 @@
+    <li><h2><%= @book.title%> </h2></li>
+    <li><h5><%= @book.author %></h5></li>
+    <li><%= @book.snippet %></li>
+
+    <%= link_to "Delete", @book, method: :delete %>
