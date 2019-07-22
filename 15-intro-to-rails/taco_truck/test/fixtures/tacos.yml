@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shell: MyString
+  price: 1.5
+  ingredients: MyString
+
+two:
+  shell: MyString
+  price: 1.5
+  ingredients: MyString
