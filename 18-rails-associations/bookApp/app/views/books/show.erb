@@ -1,0 +1,10 @@
+<h3>Title : </h3>
+<%= @book.title %><br>
+<%#= @book.author %><br>
+<h3>Authors : </h3>
+<% @book.author %>
+<h3>Snippet : </h3>
+<%= @book.snippet %><br>
+
+<%= link_to "Edit", edit_book_path(@book)%>
+<%= link_to "Delete", @book, method: :delete%>

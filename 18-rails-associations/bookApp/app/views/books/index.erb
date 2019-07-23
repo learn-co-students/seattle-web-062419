@@ -1,0 +1,8 @@
+
+<% @books.each do |book| %>
+<div class="card bg-light border-dark mb-3 text-center" style="width: 15rem;">
+  <h2><%= book.title %></h2>
+  <h6><%= book.author %></h6>
+  <h3><%= link_to "More Info", book, :class => "btn btn-primary" %></h3>
+</div>
+<% end %>
