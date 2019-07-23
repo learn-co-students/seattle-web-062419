@@ -3,10 +3,10 @@
 Prepping for Rails Review
 
 ## SWBATs
-- [ ] Refresher: Add a new ActiveRecord model and associate it with an existing model
-- [ ] New concept: `dependent: :destroy`
-- [ ] Refresher: Display information about an associated model
-- [ ] Allow the user to make a new instance of an ActiveRecord model that belongs to another model, this time in Rails
+- [x] Refresher: Add a new ActiveRecord model and associate it with an existing model
+- [x] New concept: `dependent: :destroy`
+- [x] Refresher: Display information about an associated model
+- [x] Allow the user to make a new instance of an ActiveRecord model that belongs to another model, this time in Rails
    - Using the `collection_select` Rails form helper
 
 ## Resources
