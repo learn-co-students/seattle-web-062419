@@ -1,0 +1,8 @@
+<ul>
+
+<% @purchases.each do |purchase|%>
+<li><%= purchase.customer_name%>
+<%= purchase.price%>
+<%= link_to purchase.brew.blend_name, purchase_path(purchase)  %></li>
+<%end%>
+</ul>
