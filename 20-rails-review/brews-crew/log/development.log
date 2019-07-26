@@ -1,0 +1,1337 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBrews (20190725180807)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "brews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "blend_name" varchar, "origin" varchar, "notes" varchar, "strength" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190725180807"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-25 18:11:57.792704"], ["updated_at", "2019-07-25 18:11:57.792704"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "Joe Nuts"], ["origin", "Kabirizi, Rwanda"], ["notes", "juicy, juicy, ginger, figs, green apple"], ["strength", 2], ["created_at", "2019-07-25 18:12:04.471220"], ["updated_at", "2019-07-25 18:12:04.471220"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "Huggy Look"], ["origin", "Opalca, Honduras"], ["notes", "structured, juicy, fresh wood, smokey, hops"], ["strength", 1], ["created_at", "2019-07-25 18:12:04.473325"], ["updated_at", "2019-07-25 18:12:04.473325"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "Blue Cake"], ["origin", "Nueva Segovia, Nicaragua"], ["notes", "dense, full, prune, star fruit, white grape"], ["strength", 1], ["created_at", "2019-07-25 18:12:04.474684"], ["updated_at", "2019-07-25 18:12:04.474684"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "KrebStar Extract"], ["origin", "Masaya, Nicaragua"], ["notes", "bright, coating, banana, butter, strawberry"], ["strength", 5], ["created_at", "2019-07-25 18:12:04.475989"], ["updated_at", "2019-07-25 18:12:04.475989"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "Good-morning Look"], ["origin", "Kayanza, Burundi"], ["notes", "wild, coating, green apple, squash, leafy greens"], ["strength", 1], ["created_at", "2019-07-25 18:12:04.477503"], ["updated_at", "2019-07-25 18:12:04.477503"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.9ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mBrew Load (0.3ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY "brews"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/brews" for ::1 at 2019-07-25 11:17:17 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BrewsController#index as HTML
+  Rendering brews/index.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered brews/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 319ms (Views: 313.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brews" for ::1 at 2019-07-25 11:20:02 -0700
+Processing by BrewsController#index as HTML
+  Rendering brews/index.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered brews/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brews/2" for ::1 at 2019-07-25 11:23:33 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  Rendered brews/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/brews/1" for ::1 at 2019-07-25 11:25:30 -0700
+Processing by BrewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YUxICRsiAmJUnqjOsnd8ll99x0Fa2wa8K+aA03CLEJX7uGSVq2C7lrX96yv7yZuZJm3SgThYoNxwakVBoVERkA==", "id"=>"1"}
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "brews" WHERE "brews"."id" = ?[0m  [["id", 1]]
+Redirected to http://localhost:3000/brews
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/brews" for ::1 at 2019-07-25 11:25:30 -0700
+Processing by BrewsController#index as HTML
+  Rendering brews/index.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered brews/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/brews/new" for ::1 at 2019-07-25 11:28:13 -0700
+Processing by BrewsController#new as HTML
+Completed 406 Not Acceptable in 24ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UnknownFormat (BrewsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/brews/new" for ::1 at 2019-07-25 11:31:04 -0700
+Processing by BrewsController#new as HTML
+  Rendering brews/new.html.erb within layouts/application
+  Rendered brews/new.html.erb within layouts/application (609.9ms)
+Completed 200 OK in 637ms (Views: 629.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/brews" for ::1 at 2019-07-25 11:31:23 -0700
+Processing by BrewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PSY7/3zqA/Q3NUqxD6MZywPIHvnue/52m2bqTEs63V6n0hdjzKi6ANZWCVRGHf7EetgLOYz4WBbA6i/emuDcWw==", "brew"=>{"blend_name"=>"TESTING", "origin"=>"dirt, mud", "notes"=>"delicious", "strength"=>"5"}, "commit"=>"Create Brew"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "TESTING"], ["origin", "dirt, mud"], ["notes", "delicious"], ["strength", 5], ["created_at", "2019-07-25 18:31:23.103407"], ["updated_at", "2019-07-25 18:31:23.103407"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/brews/6
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/brews/6" for ::1 at 2019-07-25 11:31:23 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  Rendered brews/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brews/6" for ::1 at 2019-07-25 11:31:27 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  Rendered brews/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/brews" for ::1 at 2019-07-25 11:31:30 -0700
+Processing by BrewsController#index as HTML
+  Rendering brews/index.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered brews/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brews/6" for ::1 at 2019-07-25 11:31:33 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  Rendered brews/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brews/2" for ::1 at 2019-07-25 11:33:35 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrew Load (0.3ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  Rendered brews/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 13.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/brews/2/edit" for ::1 at 2019-07-25 11:33:39 -0700
+Processing by BrewsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering brews/edit.html.erb within layouts/application
+  Rendered brews/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/brews/2" for ::1 at 2019-07-25 11:33:51 -0700
+Processing by BrewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OjX/GabWIxrNMQI3RPBJZCco5KCnChi+sDLC6jcGD/egwdOFFpSa7ixSQdINTq5rXjjxYMWJvt7rvgd45twO8g==", "brew"=>{"blend_name"=>"Huggy Look", "origin"=>"Opalca, Honduras", "notes"=>"juicy, juicy, fresh wood, smokey, hops", "strength"=>"1"}, "commit"=>"Update Brew", "id"=>"2"}
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "brews" SET "notes" = ?, "updated_at" = ? WHERE "brews"."id" = ?[0m  [["notes", "juicy, juicy, fresh wood, smokey, hops"], ["updated_at", "2019-07-25 18:33:51.042759"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/brews/2
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/brews/2" for ::1 at 2019-07-25 11:33:51 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  Rendered brews/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBrew Load (0.9ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+Started GET "/brews/strongest" for ::1 at 2019-07-25 11:58:29 -0700
+Processing by BrewsController#strongest as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fb2364e4db0>
+Did you mean?  try):
+  
+app/controllers/brews_controller.rb:38:in `strongest'
+Started GET "/brews/strongest" for ::1 at 2019-07-25 12:00:11 -0700
+Processing by BrewsController#strongest as HTML
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY "brews"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendering brews/strongest.html.erb within layouts/application
+  Rendered brews/strongest.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/brews/strongest" for ::1 at 2019-07-25 12:00:44 -0700
+Processing by BrewsController#strongest as HTML
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY "brews"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendering brews/strongest.html.erb within layouts/application
+  Rendered brews/strongest.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `blend_name' for #<Array:0x00007fb23b678c30>):
+    1: <%= @strongest_blends.blend_name%>
+  
+app/views/brews/strongest.html.erb:1:in `_app_views_brews_strongest_html_erb__1609227552504571354_70201738789480'
+Started GET "/brews/strongest" for ::1 at 2019-07-25 12:01:39 -0700
+Processing by BrewsController#strongest as HTML
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY "brews"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendering brews/strongest.html.erb within layouts/application
+  Rendered brews/strongest.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:10:38 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.7) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePurchases (20190725195951)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "purchases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_name" varchar, "price" float, "brew_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190725195951"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "Blacktop Solstice"], ["origin", "Sul Minas, Brazil"], ["notes", "dirty, full, honey, nutmeg, marshmallow"], ["strength", 2], ["created_at", "2019-07-25 20:11:55.633105"], ["updated_at", "2019-07-25 20:11:55.633105"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "The Town"], ["origin", "Agalta, Honduras"], ["notes", "clean, round, soy sauce, orange blossom, green grape"], ["strength", 1], ["created_at", "2019-07-25 20:11:55.635932"], ["updated_at", "2019-07-25 20:11:55.635932"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "Dark Cup"], ["origin", "Sul Minas, Brazil"], ["notes", "quick, round, hops, papaya, rose hips"], ["strength", 5], ["created_at", "2019-07-25 20:11:55.637485"], ["updated_at", "2019-07-25 20:11:55.637485"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "Huggy Cowboy"], ["origin", "Sul Minas, Brazil"], ["notes", "mild, full, orange, carmel, olive"], ["strength", 3], ["created_at", "2019-07-25 20:11:55.639021"], ["updated_at", "2019-07-25 20:11:55.639021"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "brews" ("blend_name", "origin", "notes", "strength", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["blend_name", "Major "], ["origin", "Kibale, Uganda"], ["notes", "faint, creamy, toast, carbon, cocoa powder"], ["strength", 4], ["created_at", "2019-07-25 20:11:55.640377"], ["updated_at", "2019-07-25 20:11:55.640377"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Sandy C. Shore"], ["price", 4.31], ["brew_id", 7], ["created_at", "2019-07-25 20:11:55.657176"], ["updated_at", "2019-07-25 20:11:55.657176"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Tom A. Toe"], ["price", 4.05], ["brew_id", 10], ["created_at", "2019-07-25 20:11:55.659461"], ["updated_at", "2019-07-25 20:11:55.659461"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Ethel L. Cahall"], ["price", 4.26], ["brew_id", 9], ["created_at", "2019-07-25 20:11:55.661114"], ["updated_at", "2019-07-25 20:11:55.661114"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Gene E. Yuss"], ["price", 6.42], ["brew_id", 6], ["created_at", "2019-07-25 20:11:55.662741"], ["updated_at", "2019-07-25 20:11:55.662741"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Arch N. Emmy"], ["price", 4.25], ["brew_id", 11], ["created_at", "2019-07-25 20:11:55.664611"], ["updated_at", "2019-07-25 20:11:55.664611"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "M. T. Toombe"], ["price", 3.81], ["brew_id", 9], ["created_at", "2019-07-25 20:11:55.666220"], ["updated_at", "2019-07-25 20:11:55.666220"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Rob A. Bank"], ["price", 5.14], ["brew_id", 3], ["created_at", "2019-07-25 20:11:55.667823"], ["updated_at", "2019-07-25 20:11:55.667823"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Chris P. Bacon"], ["price", 5.41], ["brew_id", 10], ["created_at", "2019-07-25 20:11:55.669649"], ["updated_at", "2019-07-25 20:11:55.669649"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Harry R. M. Pitts"], ["price", 3.57], ["brew_id", 5], ["created_at", "2019-07-25 20:11:55.671369"], ["updated_at", "2019-07-25 20:11:55.671369"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Carson O. Gin"], ["price", 6.55], ["brew_id", 7], ["created_at", "2019-07-25 20:11:55.673014"], ["updated_at", "2019-07-25 20:11:55.673014"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:12:07 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 175ms (Views: 161.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:13:36 -0700
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:14:50 -0700
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (639.1ms)
+Completed 200 OK in 650ms (Views: 648.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:15:25 -0700
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:15:40 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bH79Lhq3guSxLce6ooIE0UnxjT1xq0jTRQhLqVF1nUH2itGyqvU7EFBOhF/rPOPeMOGY/RMo7rMehI47gK+cRA==", "purchase"=>{"customer_name"=>"Lucy", "price"=>"100", "brew_id"=>"7"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_name", "Lucy"], ["price", 100.0], ["brew_id", 7], ["created_at", "2019-07-25 20:15:40.579250"], ["updated_at", "2019-07-25 20:15:40.579250"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/purchases/11
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/purchases/11" for ::1 at 2019-07-25 13:15:40 -0700
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PurchasesController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/purchases/11" for ::1 at 2019-07-25 13:16:15 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (PurchasesController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/purchases/11" for ::1 at 2019-07-25 13:18:20 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/purchases/11" for ::1 at 2019-07-25 13:18:30 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/purchases" for ::1 at 2019-07-25 13:18:52 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PurchasesController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/purchases" for ::1 at 2019-07-25 13:21:45 -0700
+Processing by PurchasesController#index as HTML
+  Rendering purchases/index.html.erb within layouts/application
+  Rendered purchases/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 12ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @purchase.each do |f|%>
+    2: <%= f.customer_name%>
+    3: <%= f.price%>
+    4: <%= f.link_to @purchase.brew, purchase_path(@purchase)  %>
+  
+app/views/purchases/index.html.erb:1:in `_app_views_purchases_index_html_erb___1036317761140038256_70267056352980'
+Started GET "/purchases" for ::1 at 2019-07-25 13:21:51 -0700
+Processing by PurchasesController#index as HTML
+  Rendering purchases/index.html.erb within layouts/application
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases"[0m
+  Rendered purchases/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `brew' for nil:NilClass):
+    1: <% @purchases.each do |f|%>
+    2: <%= f.customer_name%>
+    3: <%= f.price%>
+    4: <%= f.link_to @purchase.brew, purchase_path(@purchase)  %>
+    5: <%end%>
+  
+app/views/purchases/index.html.erb:4:in `block in _app_views_purchases_index_html_erb___1036317761140038256_70267133610420'
+app/views/purchases/index.html.erb:1:in `_app_views_purchases_index_html_erb___1036317761140038256_70267133610420'
+Started GET "/purchases" for ::1 at 2019-07-25 13:22:49 -0700
+Processing by PurchasesController#index as HTML
+  Rendering purchases/index.html.erb within layouts/application
+  [1m[36mPurchase Load (0.2ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases"[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered purchases/index.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"purchases", :id=>nil}, missing required keys: [:id]):
+    1: <% @purchases.each do |purchase|%>
+    2: <%= purchase.customer_name%>
+    3: <%= purchase.price%>
+    4: <%= link_to purchase.brew.blend_name, purchase_path(@purchase)  %>
+    5: <%end%>
+  
+app/views/purchases/index.html.erb:4:in `block in _app_views_purchases_index_html_erb___1036317761140038256_70267121303740'
+app/views/purchases/index.html.erb:1:in `_app_views_purchases_index_html_erb___1036317761140038256_70267121303740'
+Started GET "/purchases" for ::1 at 2019-07-25 13:23:21 -0700
+Processing by PurchasesController#index as HTML
+  Rendering purchases/index.html.erb within layouts/application
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases"[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered purchases/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/purchases/2" for ::1 at 2019-07-25 13:23:30 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPurchase Load (0.2ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/purchases/3" for ::1 at 2019-07-25 13:23:35 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/purchases/10" for ::1 at 2019-07-25 13:23:40 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/purchases/7" for ::1 at 2019-07-25 13:23:45 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/purchases" for ::1 at 2019-07-25 13:24:18 -0700
+Processing by PurchasesController#index as HTML
+  Rendering purchases/index.html.erb within layouts/application
+  [1m[36mPurchase Load (0.2ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases"[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.0ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered purchases/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/purchases/10" for ::1 at 2019-07-25 13:25:20 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/purchases/9" for ::1 at 2019-07-25 13:25:28 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/purchases/9" for ::1 at 2019-07-25 13:26:23 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brews/5" for ::1 at 2019-07-25 13:26:26 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  Rendered brews/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/purchases/11" for ::1 at 2019-07-25 13:26:32 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brews/7" for ::1 at 2019-07-25 13:26:33 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  Rendered brews/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/brews/7" for ::1 at 2019-07-25 13:28:23 -0700
+Processing by BrewsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering brews/show.html.erb within layouts/application
+  [1m[36mPurchase Load (0.2ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases" WHERE "purchases"."brew_id" = ?[0m  [["brew_id", 7]]
+  Rendered brews/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brews/new" for ::1 at 2019-07-25 13:30:01 -0700
+Processing by BrewsController#new as HTML
+  Rendering brews/new.html.erb within layouts/application
+  Rendered brews/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/brews" for ::1 at 2019-07-25 13:30:08 -0700
+Processing by BrewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xqgsOeXKwKO64UNgzbdu2bNcbO5v/IyzbhcADla3QdlcXAClVYh5V1uCAIWECYnWykx5Lg1/KtM1m8Wch21A3A==", "brew"=>{"blend_name"=>"Blacktop Solstice", "origin"=>"TEST", "notes"=>"TEST", "strength"=>"5"}, "commit"=>"Create Brew"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "brews" WHERE "brews"."blend_name" = ? LIMIT ?[0m  [["blend_name", "Blacktop Solstice"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/brews
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/brews" for ::1 at 2019-07-25 13:30:09 -0700
+Processing by BrewsController#index as HTML
+  Rendering brews/index.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered brews/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSizeToPurchases (20190725203307)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "purchases" ADD "size" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190725203307"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:34:29 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (604.1ms)
+Completed 200 OK in 740ms (Views: 725.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:35:10 -0700
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:35:29 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KLz02boWtp6XcxEUEUhfn/LV2aaS11siZPTDoSt6TxWySNhFClQPanYQUvFY9riQi8XMZvBU/UI/eAYz+qBOEA==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"purchases", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/purchases_controller.rb:9:in `create'
+Started POST "/purchases" for ::1 at 2019-07-25 13:37:42 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KLz02boWtp6XcxEUEUhfn/LV2aaS11siZPTDoSt6TxWySNhFClQPanYQUvFY9riQi8XMZvBU/UI/eAYz+qBOEA==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  Rendered purchases/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    4: <%= f.label :price%>
+    5: <%= f.number_field :price %>
+    6: <%= f.label :selected_brew%>
+    7: <%= f.collection_select :brew_id, @brews, :id, :blend_name %>
+    8: <%= f.label :size%>
+    9: <%= f.text_field :size%>
+   10: <%= f.submit%>
+  
+app/views/purchases/new.html.erb:7:in `block in _app_views_purchases_new_html_erb__3376035205556040783_70254894616920'
+app/views/purchases/new.html.erb:1:in `_app_views_purchases_new_html_erb__3376035205556040783_70254894616920'
+app/controllers/purchases_controller.rb:12:in `create'
+Started POST "/purchases" for ::1 at 2019-07-25 13:38:57 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KLz02boWtp6XcxEUEUhfn/LV2aaS11siZPTDoSt6TxWySNhFClQPanYQUvFY9riQi8XMZvBU/UI/eAYz+qBOEA==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"small"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at", "size") VALUES (?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Stephanie"], ["price", 20.0], ["brew_id", 2], ["created_at", "2019-07-25 20:38:57.554839"], ["updated_at", "2019-07-25 20:38:57.554839"], ["size", "small"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/purchases/12
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/purchases/12" for ::1 at 2019-07-25 13:38:57 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPurchase Load (0.2ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:39:52 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KLz02boWtp6XcxEUEUhfn/LV2aaS11siZPTDoSt6TxWySNhFClQPanYQUvFY9riQi8XMZvBU/UI/eAYz+qBOEA==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  Rendered purchases/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    4: <%= f.label :price%>
+    5: <%= f.number_field :price %>
+    6: <%= f.label :selected_brew%>
+    7: <%= f.collection_select :brew_id, @brews, :id, :blend_name %>
+    8: <%= f.label :size%>
+    9: <%= f.text_field :size%>
+   10: <%= f.submit%>
+  
+app/views/purchases/new.html.erb:7:in `block in _app_views_purchases_new_html_erb__3376035205556040783_70254882727780'
+app/views/purchases/new.html.erb:1:in `_app_views_purchases_new_html_erb__3376035205556040783_70254882727780'
+app/controllers/purchases_controller.rb:12:in `create'
+Started POST "/purchases" for ::1 at 2019-07-25 13:40:06 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KLz02boWtp6XcxEUEUhfn/LV2aaS11siZPTDoSt6TxWySNhFClQPanYQUvFY9riQi8XMZvBU/UI/eAYz+qBOEA==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 12.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:40:10 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vuTc6rMKXqRWReVdAf+w/GcOSeqq8TP8y6IsjZl/Na4kEPB2A0jnULcmprhIQVfzHh5cKshylZyQLukfSKU0qw==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 24ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:40:11 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjEdRDe6bZT8VPGZiddlMSrTELbbFMdKkzGrwXUuE2iwxTHYh/jUYB03snzAaYI+U8MFdrmXYSrIvW5TpPQSbQ==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.3ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:40:11 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iIC6+iA63ojGKR0H+Jv/G9dOrd+RTAcjFq6t28Y+5TUSdJZmkHhnfCdKXuKxJRgUrl64H/PPoUNNImhJF+TkMA==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:40:12 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2pxDxRpasFcJoDAHfwFd7pqWExCx7yiViX/dxF2wYrhAaG9ZqhgJo+jDc+I2v7rh44YG0NNsjvXS8xhWjGpjvQ==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 40ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:40:12 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b7LCF8LgrbehuIolwLL1kc7N34HJrYIUhpHyj6aZhfP1Ru6LcqIUQ0DbycCJDBKet93KQasuJHTdHTcdd0OE9g==", "purchase"=>{"customer_name"=>"Stephanie", "price"=>"20", "brew_id"=>"2", "size"=>"HUGE"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCreamerStrengthToPurchases (20190725204214)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "purchases" ADD "creamer_strength" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190725204214"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/purchases" for ::1 at 2019-07-25 13:42:44 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PurchasesController#index as HTML
+  Rendering purchases/index.html.erb within layouts/application
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases"[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered purchases/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 142ms (Views: 133.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/purchases/12" for ::1 at 2019-07-25 13:42:47 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:42:50 -0700
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (629.5ms)
+Completed 200 OK in 640ms (Views: 638.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:43:16 -0700
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:43:35 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eCBxgcWFUtOJxapIOjSBJxo7o0188ZbsQKm5+5VuhSXi1F0ddcfrJ2im6a1zimYoYyu2jR5yMIwbJXxpRLSEIA==", "purchase"=>{"customer_name"=>"Sean", "price"=>"15", "brew_id"=>"10", "size"=>"small", "creamer_strength"=>"light"}, "commit"=>"Create Purchase"}
+Unpermitted parameter: :creamer_strength
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:43:46 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c5Oz9N0utsdtarxwV+hBOAHQtujta/tdZgReuj0T/wLpZ59obWwPM4wJ/5UeVqY3eMCjKI/oXT09iJso7Mn+Bw==", "purchase"=>{"customer_name"=>"Sean", "price"=>"15", "brew_id"=>"10", "size"=>"small", "creamer_strength"=>"none"}, "commit"=>"Create Purchase"}
+Unpermitted parameter: :creamer_strength
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:44:05 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mHc6yyXWixpi1SSCGClmef23/TbU2u/+bhm6P6+ca+QCgxZXlZQy7oO2Z2dRl4F2hKfo9rZZSZ41lX+tfkZq4Q==", "purchase"=>{"customer_name"=>"Sean", "price"=>"15", "brew_id"=>"10", "size"=>"small", "creamer_strength"=>"light"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at", "size", "creamer_strength") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Sean"], ["price", 15.0], ["brew_id", 10], ["created_at", "2019-07-25 20:44:05.997888"], ["updated_at", "2019-07-25 20:44:05.997888"], ["size", "small"], ["creamer_strength", "light"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/purchases/13
+Completed 302 Found in 25ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/purchases/13" for ::1 at 2019-07-25 13:44:06 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPurchase Load (0.2ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/purchases/13" for ::1 at 2019-07-25 13:44:49 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSpecialInstructionsToPurchases (20190725204703)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "purchases" ADD "special_instructions" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190725204703"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/purchases/new" for ::1 at 2019-07-25 13:47:59 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PurchasesController#new as HTML
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.2ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (636.5ms)
+Completed 200 OK in 778ms (Views: 757.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:48:50 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFSHrv4+xPea8BEuiTvFyfwYm9AqOA4hjiJ3JjRsUaXeoKsyTnx9A3uTUsvAhSLGhQiOEEi7qEHVrrK05bZQoA==", "purchase"=>{"customer_name"=>"Kelliann", "price"=>"5", "brew_id"=>"5", "size"=>"small", "creamer_strength"=>"none", "special_instructions"=>"This is going to be longer than 140 characters to check to see if the length requirements are working. How are you today? Is this enough characters yety??????????????????????????????????????????"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `special_intructions' for #<Purchase:0x00007fd7c3b18238>
+Did you mean?  special_instructions
+               special_instructions=
+               special_instructions?
+               special_instructions_was):
+  
+app/controllers/purchases_controller.rb:10:in `create'
+Started POST "/purchases" for ::1 at 2019-07-25 13:49:42 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFSHrv4+xPea8BEuiTvFyfwYm9AqOA4hjiJ3JjRsUaXeoKsyTnx9A3uTUsvAhSLGhQiOEEi7qEHVrrK05bZQoA==", "purchase"=>{"customer_name"=>"Kelliann", "price"=>"5", "brew_id"=>"5", "size"=>"small", "creamer_strength"=>"none", "special_instructions"=>"hot"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `special_intructions' for #<Purchase:0x00007fd7c9e6bf10>
+Did you mean?  special_instructions
+               special_instructions=
+               special_instructions?
+               special_instructions_was):
+  
+app/controllers/purchases_controller.rb:10:in `create'
+Started POST "/purchases" for ::1 at 2019-07-25 13:50:46 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFSHrv4+xPea8BEuiTvFyfwYm9AqOA4hjiJ3JjRsUaXeoKsyTnx9A3uTUsvAhSLGhQiOEEi7qEHVrrK05bZQoA==", "purchase"=>{"customer_name"=>"Kelliann", "price"=>"5", "brew_id"=>"5", "size"=>"small", "creamer_strength"=>"none", "special_instructions"=>"hot"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `special_intructions' for #<Purchase:0x00007fd7cd003668>
+Did you mean?  special_instructions
+               special_instructions=
+               special_instructions?
+               special_instructions_was):
+  
+app/controllers/purchases_controller.rb:10:in `create'
+Started POST "/purchases" for ::1 at 2019-07-25 13:51:18 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFSHrv4+xPea8BEuiTvFyfwYm9AqOA4hjiJ3JjRsUaXeoKsyTnx9A3uTUsvAhSLGhQiOEEi7qEHVrrK05bZQoA==", "purchase"=>{"customer_name"=>"Kelliann", "price"=>"5", "brew_id"=>"5", "size"=>"small", "creamer_strength"=>"none", "special_instructions"=>"hot"}, "commit"=>"Create Purchase"}
+  [1m[36mBrew Load (0.3ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 173401ms (ActiveRecord: 1.8ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/purchases_controller.rb:11:in `create'
+Started POST "/purchases" for ::1 at 2019-07-25 13:54:31 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFSHrv4+xPea8BEuiTvFyfwYm9AqOA4hjiJ3JjRsUaXeoKsyTnx9A3uTUsvAhSLGhQiOEEi7qEHVrrK05bZQoA==", "purchase"=>{"customer_name"=>"Kelliann", "price"=>"5", "brew_id"=>"5", "size"=>"small", "creamer_strength"=>"none", "special_instructions"=>"This is going to be longer than 140 characters to check to see if the length requirements are working. How are you today? Is this enough characters yety??????????????????????????????????????????"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.8ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  Rendering purchases/new.html.erb within layouts/application
+  [1m[36mBrew Load (0.8ms)[0m  [1m[34mSELECT "brews".* FROM "brews"[0m
+  Rendered purchases/new.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 472ms (Views: 256.5ms | ActiveRecord: 17.4ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:54:37 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kMd4Q+diV8wmo4CZ6Lbyo7puZZbqRywqJlPxxr10alMKM1TfVyDuOMfAw3yhCBWsw35wVojEikp93zRUbK5rVg==", "purchase"=>{"customer_name"=>"Kelliann", "price"=>"5", "brew_id"=>"5", "size"=>"small", "creamer_strength"=>"none", "special_instructions"=>"hot"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.7ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at", "size", "creamer_strength", "special_instructions") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Kelliann"], ["price", 5.0], ["brew_id", 5], ["created_at", "2019-07-25 20:54:37.586941"], ["updated_at", "2019-07-25 20:54:37.586941"], ["size", "small"], ["creamer_strength", "none"], ["special_instructions", "hot"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/purchases/14
+Completed 302 Found in 65ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/purchases/14" for ::1 at 2019-07-25 13:54:37 -0700
+Processing by PurchasesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPurchase Load (0.9ms)[0m  [1m[34mSELECT  "purchases".* FROM "purchases" WHERE "purchases"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mBrew Load (0.7ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered purchases/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 324ms (Views: 301.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/purchases" for ::1 at 2019-07-25 13:55:47 -0700
+Processing by PurchasesController#index as HTML
+  Rendering purchases/index.html.erb within layouts/application
+  [1m[36mPurchase Load (1.1ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases"[0m
+  [1m[36mBrew Load (0.9ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.7ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.7ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBrew Load (1.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.8ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.7ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.9ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.3ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mBrew Load (0.7ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Brew Load (0.2ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered purchases/index.html.erb within layouts/application (454.7ms)
+Completed 200 OK in 716ms (Views: 688.9ms | ActiveRecord: 23.9ms)
+
+
+Started POST "/purchases" for ::1 at 2019-07-25 13:56:00 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFSHrv4+xPea8BEuiTvFyfwYm9AqOA4hjiJ3JjRsUaXeoKsyTnx9A3uTUsvAhSLGhQiOEEi7qEHVrrK05bZQoA==", "purchase"=>{"customer_name"=>"Kelliann", "price"=>"5", "brew_id"=>"5", "size"=>"small", "creamer_strength"=>"none", "special_instructions"=>"mine"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "purchases" ("customer_name", "price", "brew_id", "created_at", "updated_at", "size", "creamer_strength", "special_instructions") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Kelliann"], ["price", 5.0], ["brew_id", 5], ["created_at", "2019-07-25 20:56:11.402973"], ["updated_at", "2019-07-25 20:56:11.402973"], ["size", "small"], ["creamer_strength", "none"], ["special_instructions", "mine"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 28746ms (ActiveRecord: 1.6ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/purchases_controller.rb:11:in `create'
+Started POST "/purchases" for ::1 at 2019-07-25 13:56:34 -0700
+Processing by PurchasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFSHrv4+xPea8BEuiTvFyfwYm9AqOA4hjiJ3JjRsUaXeoKsyTnx9A3uTUsvAhSLGhQiOEEi7qEHVrrK05bZQoA==", "purchase"=>{"customer_name"=>"Kelliann", "price"=>"5", "brew_id"=>"5", "size"=>"small", "creamer_strength"=>"none", "special_instructions"=>"This is going to be longer than 140 characters to check to see if the length requirements are working. How are you today? Is this enough characters yety??????????????????????????????????????????"}, "commit"=>"Create Purchase"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrew Load (0.1ms)[0m  [1m[34mSELECT  "brews".* FROM "brews" WHERE "brews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 96126ms (ActiveRecord: 0.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/purchases_controller.rb:11:in `create'
