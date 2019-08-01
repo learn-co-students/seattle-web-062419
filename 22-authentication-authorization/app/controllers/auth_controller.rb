@@ -6,7 +6,7 @@ class AuthController < ApplicationController
   def verify
     # byebug
     @user = User.find_by(username: params[:auth][:username])
-    if @user && @user.validate(params[:auth][:password])
+    if @user && @user.authenticate(params[:auth][:password])
       # session[:username]
       session[:user_id] = @user.id
       redirect_to students_path
